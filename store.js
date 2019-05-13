@@ -1,6 +1,12 @@
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
 import appReducer from './reducers/appReducer'
 
-const store = createStore(appReducer)
+const reducers = combineReducers({
+    app: appReducer,
+    form: formReducer
+})
+
+const store = createStore(reducers)
 
 export default store

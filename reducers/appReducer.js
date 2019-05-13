@@ -2,7 +2,7 @@ const initialState = {
     text: ''
 }
 
-const app = (state = initialState, action) => {
+const appReducer = (state = initialState, action) => {
     switch(action.type) {
         case 'UPDATE_TEXT':
             return {
@@ -14,4 +14,4 @@ const app = (state = initialState, action) => {
     }
 }
 
-export default app
+export default appReducer
